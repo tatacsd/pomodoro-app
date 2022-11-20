@@ -20,8 +20,6 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   border: none;
   margin: 10px;
 
-  /* get the color from the theme */
-  background-color: ${(props) => props.theme.secondary};
-
-  /* background-color: ${(props) => buttonVariants[props.variant]}; */
+  background-color: ${(props) => props.theme['green-500']};
+  color: ${(props) => props.theme.white};
 `;
