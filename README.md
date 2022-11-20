@@ -1,2 +1,2 @@
 ## technologies
-styled-components
+styled-components -> using css in js

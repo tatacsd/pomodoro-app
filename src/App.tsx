@@ -1,5 +1,13 @@
-import './App.css';
+import { Button } from './components/Button';
 
 export function App() {
-  return <h1>Hellow</h1>;
+  return (
+    <>
+      <Button variant="primary" />
+      <Button variant="secondary" />
+      <Button variant="danger" />
+      <Button variant="success" />
+      <Button />
+    </>
+  );
 }
