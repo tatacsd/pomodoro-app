@@ -53,7 +53,7 @@ export function CycleContextProvider({ children }: CyclesContextProviderProps) {
     }
   );
 
-  const { cycles, activeCycleID } = cyclesState;
+  const { cycles, activeCycleID } = cyclesState || {};
   const activeCycle = cycles.find((cycle) => cycle.id === activeCycleID);
   const [secondsCountdown, setSecondsCountdown] = useState(() => {
     if (activeCycle) {
