@@ -1,4 +1,4 @@
-import { HistoryContainer, HistoryList } from './styles';
+import { HistoryContainer, HistoryList, Status } from './styles';
 
 export function History() {
   return (
@@ -20,61 +20,81 @@ export function History() {
               <td>task 1</td>
               <td>1h</td>
               <td>10:00</td>
-              <td>done</td>
+              <td>
+                <Status statusColor="completed"> Done </Status>
+              </td>
             </tr>
             <tr>
               <td>task 1</td>
               <td>1h</td>
               <td>10:00</td>
-              <td>done</td>
+              <td>
+                <Status statusColor="completed"> Done </Status>
+              </td>
             </tr>
             <tr>
               <td>task 1</td>
               <td>1h</td>
               <td>10:00</td>
-              <td>done</td>
+              <td>
+                <Status statusColor="completed"> Done </Status>
+              </td>
             </tr>
             <tr>
               <td>task 1</td>
               <td>1h</td>
               <td>10:00</td>
-              <td>done</td>
+              <td>
+                <Status statusColor="completed"> Done </Status>
+              </td>
             </tr>
             <tr>
               <td>task 1</td>
               <td>1h</td>
               <td>10:00</td>
-              <td>done</td>
+              <td>
+                <Status statusColor="completed"> Done </Status>
+              </td>
             </tr>
             <tr>
               <td>task 1</td>
               <td>1h</td>
               <td>10:00</td>
-              <td>done</td>
+              <td>
+                <Status statusColor="completed"> Done </Status>
+              </td>
             </tr>
             <tr>
               <td>task 1</td>
               <td>1h</td>
               <td>10:00</td>
-              <td>done</td>
+              <td>
+                <Status statusColor="completed"> Done </Status>
+              </td>
             </tr>
             <tr>
               <td>task 1</td>
               <td>1h</td>
               <td>10:00</td>
-              <td>done</td>
+              <td>
+                <Status statusColor="completed"> Done </Status>
+              </td>
             </tr>
             <tr>
               <td>task 1</td>
               <td>1h</td>
               <td>10:00</td>
-              <td>done</td>
+              <td>
+                <Status statusColor="completed"> Done </Status>
+              </td>
             </tr>
             <tr>
               <td>task 1</td>
               <td>1h</td>
               <td>10:00</td>
-              <td>done</td>
+              <td>
+                <Status statusColor="completed"> Done </Status>
+              </td>
             </tr>
           </tbody>
         </table>
