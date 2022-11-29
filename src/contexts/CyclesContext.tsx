@@ -11,7 +11,7 @@ import {
   interruptCurrentCycleAction,
   markCurrentCycleAsFinishedAction,
 } from '../reducers/cycles/actions';
-import { Cycle, cyclesReducer } from '../reducers/cycles/reducer';
+import { Cycle, cyclesReducer, CyclesState } from '../reducers/cycles/reducer';
 
 interface CreateCycleData {
   task: string;
@@ -53,7 +53,7 @@ export function CycleContextProvider({ children }: CyclesContextProviderProps) {
     }
   );
 
-  const { cycles, activeCycleID } = cyclesState || {};
+  const { cycles, activeCycleID } = cyclesState || ({} as CyclesState);
   const activeCycle = cycles.find((cycle) => cycle.id === activeCycleID);
   const [secondsCountdown, setSecondsCountdown] = useState(() => {
     if (activeCycle) {
