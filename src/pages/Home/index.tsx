@@ -74,6 +74,12 @@ export function Home() {
     };
   }, [activeCycle]);
 
+  useEffect(() => {
+    if (activeCycle) {
+      document.title = `${minutesLeft}:${secondsLeft} - ${activeCycle.task}`;
+    }
+  }, [minutesLeft, secondsLeft]);
+
   const handleCreateNewCycle = (data: NewCycleFormData) => {
     const newCycle: Cycle = {
       id: String(new Date().getTime()),
