@@ -11,3 +11,6 @@ phosphor-react -> a react library for icons
 props drilling -> passing props down manually at every level
 
 context api -> allow the data communication between components without having to pass props down manually at every level
+
+
+immer -> a library that allows you to work with immutable state in a more convenient way, like they were not immutable, allowing us to change the state directly just as if it were a normal variables, but on the background, immer will create a copy of the state and return the new state
