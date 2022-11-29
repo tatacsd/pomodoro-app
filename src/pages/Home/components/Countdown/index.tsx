@@ -55,9 +55,9 @@ export function Countdown() {
 
   // Document title with active cycle task
   useEffect(() => {
-    if (activeCycle) {
-      document.title = `${minutesLeft}:${secondsLeft} - ${activeCycle.task}`;
-    }
+    activeCycle
+      ? (document.title = `${minutesLeft}:${secondsLeft} - ${activeCycle.task}`)
+      : (document.title = 'Pomodoro Timer');
   }, [minutesLeft, secondsLeft]);
   return (
     <CountdownContainer>
