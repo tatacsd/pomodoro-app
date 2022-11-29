@@ -6,7 +6,7 @@ import { CountdownContainer, Separator } from './styles';
 export function Countdown() {
   const {
     activeCycle,
-    setCycles,
+    markCurrentCycleAsFinished,
     activeCycleID,
     secondsCountdown,
     setSecondsCountdown,
@@ -32,17 +32,7 @@ export function Countdown() {
 
         if (secondsDifference >= totalActiveSeconds) {
           // finish cycle
-          setCycles((state) =>
-            state.map((cycle) => {
-              if (cycle.id === activeCycleID) {
-                return {
-                  ...cycle,
-                  finishedAt: new Date(), // set finishedAt
-                };
-              }
-              return cycle;
-            })
-          );
+          markCurrentCycleAsFinished();
 
           setSecondsCountdown(totalActiveSeconds);
           clearInterval(interval);
@@ -56,7 +46,12 @@ export function Countdown() {
     return () => {
       clearInterval(interval);
     };
-  }, [activeCycle, totalActiveSeconds, activeCycleID, setCycles]);
+  }, [
+    activeCycle,
+    totalActiveSeconds,
+    activeCycleID,
+    markCurrentCycleAsFinished,
+  ]);
 
   // Document title with active cycle task
   useEffect(() => {
