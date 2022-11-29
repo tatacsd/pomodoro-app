@@ -24,16 +24,21 @@ const newCycleFormValidationSchema = zod.object({
     .max(60, 'Minutes amount must be at most 60'),
 });
 
+type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>;
+
 export function Home() {
-  const { register, handleSubmit, watch } = useForm({
+  const { register, handleSubmit, watch } = useForm<NewCycleFormData>({
     resolver: zodResolver(newCycleFormValidationSchema),
+    defaultValues: {
+      task: '',
+      minutsAmount: 0,
+    },
   });
 
   const task = watch('task');
-  const minutsAmount = watch('minutsAmount');
   const isSubmitDisabled = !task;
 
-  const handleCreateNewCycle = (data: any) => {
+  const handleCreateNewCycle = (data: NewCycleFormData) => {
     console.log(data);
   };
 
@@ -69,7 +74,7 @@ export function Home() {
             step={5}
             min={5}
             max={60}
-            {...register('minutesAmount', { valueAsNumber: true })}
+            {...register('minutsAmount', { valueAsNumber: true })}
           />
           <span>minutes.</span>
         </FormContainer>
