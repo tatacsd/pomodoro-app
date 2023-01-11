@@ -49,6 +49,18 @@ export function CycleContextProvider({ children }: CyclesContextProviderProps) {
 
       if (storedStateJSON) {
         return JSON.parse(storedStateJSON);
+      } else {
+        return {
+          cycles: [
+            {
+              id: '1',
+              task: 'Estudar React',
+              minutesAmount: 25,
+              startedAt: new Date(),
+            },
+          ],
+          activeCycleID: '1',
+        };
       }
     }
   );
