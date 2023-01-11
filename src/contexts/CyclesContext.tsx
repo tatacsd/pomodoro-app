@@ -44,7 +44,7 @@ export function CycleContextProvider({ children }: CyclesContextProviderProps) {
     },
     () => {
       const storedStateJSON = localStorage.getItem(
-        '@pomodoro-app:cycles-states-1.0.0.0'
+        '@pomodoro-app:cycles-states-1.0.0.1'
       );
 
       if (storedStateJSON) {
@@ -65,7 +65,7 @@ export function CycleContextProvider({ children }: CyclesContextProviderProps) {
 
   useEffect(() => {
     const stateJSON = JSON.stringify(cyclesState);
-    localStorage.setItem('@pomodoro-app:cycles-states-1.0.0.0', stateJSON);
+    localStorage.setItem('@pomodoro-app:cycles-states-1.0.0.1', stateJSON);
   }, [cyclesState]);
 
   const createNewCycle = (data: CreateCycleData) => {
