@@ -55,7 +55,6 @@ This project was developed using the following technologies:
 - [React router dom](https://reactrouter.com/web/guides/quick-start)
 
 
-
 ## 💻 Project
 
 This project is a simple task manager, where you can set the task and the time to complete. It is a simple project to practice the use of context api, immer, react hook form, zod, styled components, react router dom, phosphor react and vite.
